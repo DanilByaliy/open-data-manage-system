@@ -38,5 +38,5 @@
 
 Видалити зв'язкок між роллю і типом дії:
 
-![alt text](./../../test/availableAction-detete.jpg)
+![alt text](./../../test/availableAction-delete.jpg)
 
