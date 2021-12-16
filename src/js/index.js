@@ -1,23 +1,16 @@
-const {
-    Action,
-    ActionType,
-    AvailableAction,
-    AvailableFor,
-    Category,
-    DataFile,
-    Dataset,
-    Grant,
-    MetadataKey,
-    MetadataValue,
-    Role,
-    State,
-    Type,
-    User,
-  } = require('./models/model');
+const db = require('./lib/db');
+const server = require('./server.js');
   
   (async () => {
-    const users = await User.findAll();
-    console.log('All users:', JSON.stringify(users, null, 4));
-  
-    const dasha = User.create({ name: 'Dan', password: '321parol' });
+      try {
+        await db.sync();
+    
+        const PORT = 8080;
+
+        server.listen(PORT, () => {
+          console.log(`Server is running on port ${PORT}`);
+        });
+      } catch (e) {
+        throw e;
+      }
   })();
