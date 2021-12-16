@@ -19,5 +19,5 @@ const {
     const users = await User.findAll();
     console.log('All users:', JSON.stringify(users, null, 4));
   
-    const dasha = User.create({ name: 'Dasha', password: '123parol' });
+    const dasha = User.create({ name: 'Dan', password: '321parol' });
   })();

@@ -4,7 +4,7 @@ const { Sequelize } = require('sequelize');
 const options = {
   database: process.env.MYSQL_DB,
   username: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
+  password: process.env.MYSQL_PASS,
   dialect: 'mysql',
   define: {
     timestamps: false,
